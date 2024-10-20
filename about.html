@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#102661",
+              start: "#391d9d",
+              middle: "#741cb6",
+              end: "#391888",
+              bodyStart: "#0d0b35",
+              bodyEnd: "#102661",
+            },
+          },
+        },
+      };
+    </script>
+    <title>WebCrafters</title>
+  </head>
+  <body class="bg-gradient-to-br from-bodyStart to-bodyEnd text-white">
+    <header class="px-2 py-2 md:py-8 md:px-16">
+      <div
+        class="flex justify-between items-center border-b-2 border-b-white pb-2"
+      >
+        <!-- Logo et nom du site -->
+        <div class="flex items-center gap-2">
+          <img class="w-16 h-16 rounded-full" src="img/logo.png" alt="logo" />
+          <p class="text-lg font-semibold">Webcrafters</p>
+        </div>
+
+        <!-- Bouton hamburger -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            class="focus:outline-none text-white hover:text-yellow-500"
+          >
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation et sélecteur de langue -->
+        <div class="hidden md:flex items-center gap-8">
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="about.html"
+                  >About-us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="contact.html"
+                  >Contact-us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Menu de navigation caché pour petit écran -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-white p-4 mt-2 rounded-lg"
+      >
+        <nav>
+          <ul class="flex flex-col gap-4">
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="about.html"
+                >About-us</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="contact.html"
+                >Contact-us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="py-16 px-8 md:px-16">
+      <!-- Intro Section -->
+      <div class="mb-12">
+        <h1 class="text-4xl font-bold text-yellow-500 text-center mb-4">
+          About Us
+        </h1>
+        <p class="text-lg text-center max-w-3xl mx-auto">
+          At <span class="font-bold">Webcrafters</span>, we specialize in
+          crafting beautiful, responsive websites and web applications tailored
+          to your business needs. With a focus on quality and efficiency, we
+          work closely with our clients to deliver solutions that not only meet,
+          but exceed their expectations.
+        </p>
+      </div>
+
+      <!-- Our Mission Section -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-yellow-500 mb-4">
+          Our Mission
+        </h2>
+        <p class="text-lg text-center max-w-3xl mx-auto">
+          Our mission is to bring ideas to life by developing innovative,
+          functional, and visually appealing digital products. We strive to
+          deliver top-notch customer experiences by understanding your business
+          goals and transforming them into effective, scalable web solutions.
+        </p>
+      </div>
+
+      <!-- Our Values Section -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-yellow-500 mb-4">
+          Our Values
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-2">Innovation</h3>
+            <p>
+              We embrace creativity and out-of-the-box thinking to ensure that
+              every project we deliver is unique and reflects the latest trends
+              in technology.
+            </p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-2">Quality</h3>
+            <p>
+              Our commitment to excellence drives us to consistently produce
+              high-quality code, stunning designs, and effective solutions that
+              exceed expectations.
+            </p>
+          </div>
+          <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold mb-2">Integrity</h3>
+            <p>
+              We build lasting relationships based on trust and transparency,
+              ensuring that we always act in the best interest of our clients
+              and their businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meet the Team Section -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-center text-yellow-500 mb-4">
+          Meet the Team
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg text-center"
+          >
+            <img
+              src="img/josue.jpg"
+              alt="Team Member 1"
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Josué MONGAN</h3>
+            <p class="text-yellow-500">Full-Stack Lead Developer</p>
+            <p class="mt-2">
+              With solid experience in full-stack development, Josué is the main
+              Next.js developer of the team. Passionate about artificial
+              intelligence, he also has robust expertise in C++ programming.
+            </p>
+          </div>
+          <div
+            class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg text-center"
+          >
+            <img
+              src="img/anis.jpg"
+              alt="Team Member 2"
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Anis MORAT</h3>
+            <p class="text-yellow-500">UI/UX Designer & Frontend Developer</p>
+            <p class="mt-2">
+              Focused on UX/UI aspects of web apps, he is our main web designer
+              and specializes in frontend development. He loves talking about
+              space and aeronautics.
+            </p>
+          </div>
+          <div
+            class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg text-center"
+          >
+            <img
+              src="img/Bill.jpg"
+              alt="Team Member 2"
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Bill VIEYRA</h3>
+            <p class="text-yellow-500">Lead Developer & AI Specialist</p>
+            <p class="mt-2">
+              Our Django and Python expert, he's able to build fast and scalable
+              applications. Always eager to learn, he's often exploring machine
+              learning concepts using TensorFlow.
+            </p>
+          </div>
+          <div
+            class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg text-center"
+          >
+            <img
+              src="img/Gerald.jpg"
+              alt="Team Member 3"
+              class="w-24 h-24 mx-auto rounded-full mb-4"
+            />
+            <h3 class="text-xl font-bold mb-2">Gérald GUIDI</h3>
+            <p class="text-yellow-500">Full-Stack Developer & Backend Specialist</p>
+            <p class="mt-2">
+              Our jack of all trades, he's a MERN stack developer with a lot of
+              experience in backend development. You can sometimes find him
+              immersing himself in Minecraft's world.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-yellow-500 mb-4">Get in Touch</h2>
+        <p class="text-lg mb-8">
+          Have a project in mind or just want to learn more about what we do?
+          We’d love to hear from you!
+        </p>
+        <a
+          href="contact.html"
+          class="bg-yellow-500 text-white py-3 px-8 rounded-full font-bold hover:bg-yellow-600 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <footer
+      class="py-8 px-4 md:px-16 flex flex-col items-center md:justify-between"
+    >
+      <!-- Top Section with Logo and Contact Info -->
+      <div
+        class="flex flex-col md:flex-row justify-between w-full pt-2 border-t-2 border-t-white items-center md:items-start"
+      >
+        <!-- Logo and Contact Info -->
+        <div class="pb-4 text-center md:text-left">
+          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="flex items-center gap-2">
+              <img class="w-8 h-8 rounded-full" src="img/logo.png" alt="logo" />
+              <p class="font-bold">Webcrafters</p>
+            </div>
+            <p>webcraftersw@gmail.com</p>
+          </div>
+          <p class="mt-2">Web developing and designing agency</p>
+        </div>
+
+        <!-- Media Section -->
+        <div
+          class="mt-4 md:mt-0 text-center md:text-left flex flex-col items-center gap-4"
+        >
+          <h3 class="font-bold mb-2">Media</h3>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61567138180292"
+              ><i class="fab fa-facebook text-2xl"></i
+            ></a>
+            <a href="https://www.instagram.com/webcraftersw/"
+              ><i class="fab fa-instagram text-2xl"></i
+            ></a>
+            <!-- <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+            <a href="#"><i class="fab fa-figma text-2xl"></i></a>
+            <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="#"><i class="fab fa-github text-2xl"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="mt-4">
+        <p class="text-center">© Copyright 2024. Made by Webcrafters</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

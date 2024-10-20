@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#102661",
+              start: "#391d9d",
+              middle: "#741cb6",
+              end: "#391888",
+              bodyStart: "#0d0b35",
+              bodyEnd: "#102661",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Nos Projets</title>
+  </head>
+  <body class="bg-gradient-to-br from-bodyStart to-bodyEnd text-white">
+    <header class="px-2 py-2 md:py-8 md:px-16">
+      <div
+        class="flex justify-between items-center border-b-2 border-b-white pb-2"
+      >
+        <!-- Logo et nom du site -->
+        <div class="flex items-center gap-2">
+          <img class="w-16 h-16 rounded-full" src="img/logo.png" alt="logo" />
+          <p class="text-lg font-semibold">Webcrafters</p>
+        </div>
+
+        <!-- Bouton hamburger -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            class="focus:outline-none text-white hover:text-yellow-500"
+          >
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation et sélecteur de langue -->
+        <div class="hidden md:flex items-center gap-8">
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="about.html"
+                  >About-us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="contact.html"
+                  >Contact-us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Menu de navigation caché pour petit écran -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-white p-4 mt-2 rounded-lg"
+      >
+        <nav>
+          <ul class="flex flex-col gap-4">
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="about.html"
+                >About-us</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="contact.html"
+                >Contact-us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="py-4 py-8 px-6 md:px-16 flex justify-center items-center">
+      <div>
+        <h1 class="text-4xl text-yellow-500 pb-1 font-bold text-center">
+          Projects
+        </h1>
+        <p class="text-lg text-center">List of our projects</p>
+      </div>
+    </div>
+
+    <div class="py-4 px-6 md:px-16">
+      <div class="bg-gray-900 p-6 rounded-lg">
+        <!-- Project 1 -->
+        <div>
+          <h1 class="text-xl md:text-3xl pb-2 flex items-center">
+            <span class="text-yellow-500 underline pr-1">Project</span>
+            <span class="text-yellow-500 pr-2">1:</span>
+            <span>Oriol's Shoe</span>
+            <span class="ml-3 text-sm bg-red-500 rounded-full font-bold p-1"
+              >On deploying</span
+            >
+          </h1>
+          <div>
+            <p class="mb-4">
+              We developed an online store for a shoe retailer, offering a
+              seamless product management system without needing to handle
+              stock. The website was designed to provide a smooth user
+              experience with a focus on:
+            </p>
+            <ul class="list-disc ml-6 mb-4">
+              <li>Product and discount management.</li>
+              <li>Order and delivery management.</li>
+              <li>Trends section for popular items.</li>
+            </ul>
+          </div>
+          <button
+            onclick="openModal('project1')"
+            class="bg-yellow-500 text-clifford px-4 py-1 mb-4 rounded-lg"
+          >
+            View Preview
+          </button>
+        </div>
+
+        <!-- Project 2 -->
+        <div>
+          <h1 class="text-xl md:text-3xl pb-2 flex items-center">
+            <span class="text-yellow-500 underline pr-1">Project</span>
+            <span class="text-yellow-500 pr-2">2:</span>
+            <span>Anis Shop</span>
+            <span class="ml-3 text-sm bg-red-500 rounded-full font-bold p-1"
+              >On deploying</span
+            >
+          </h1>
+          <div>
+            <p class="mb-4">
+              Our second project involved a more complex online store, offering
+              a wide range of products. The client sourced items from abroad,
+              which required:
+            </p>
+            <ul class="list-disc ml-6 mb-4">
+              <li>Stock management with product updates.</li>
+              <li>
+                Highlighting products and organizing them into categories.
+              </li>
+              <li>User-friendly shopping cart functionality.</li>
+              <li>
+                Secure online payment methods, including FedaPaye and payment on
+                delivery options.
+              </li>
+              <li>Administrator feature for adding stories.</li>
+            </ul>
+          </div>
+          <button
+            onclick="openModal('project2')"
+            class="bg-yellow-500 text-clifford px-4 py-1 mb-4 rounded-lg"
+          >
+            View Preview
+          </button>
+        </div>
+        <div
+          id="modal"
+          class="fixed inset-0 bg-black bg-opacity-70 hidden flex justify-center items-center z-50"
+        >
+          <div class="bg-white rounded-lg p-6 w-full max-w-2xl relative">
+            <button
+              onclick="closeModal()"
+              class="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-800"
+            >
+              &times;
+            </button>
+            <div class="flex justify-between items-center">
+              <button
+                onclick="prevImage()"
+                class="text-2xl text-gray-700 hover:text-gray-900"
+              >
+                &#8592;
+              </button>
+              <div
+                id="image-container"
+                class="w-full flex flex-col justify-center items-center"
+              >
+                <img
+                  id="modal-image"
+                  src=""
+                  alt="Preview Image"
+                  class="w-full h-auto rounded-lg object-contain max-h-96"
+                />
+                <!-- Description added here -->
+                <p
+                  id="modal-description"
+                  class="mt-4 text-center text-gray-700"
+                ></p>
+              </div>
+              <button
+                onclick="nextImage()"
+                class="text-2xl text-gray-700 hover:text-gray-900"
+              >
+                &#8594;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why choose us? -->
+        <div>
+          <h1 class="text-3xl pb-2 flex items-center text-yellow-500">
+            Why choose us?
+          </h1>
+          <p class="mb-4">
+            These projects showcase our ability to understand the specific needs
+            of our clients and develop tailored solutions. Here are a few
+            reasons why other clients should consider working with us:
+          </p>
+          <ul class="list-disc ml-6">
+            <li>Proven technical expertise in creating online stores.</li>
+            <li>Client-centered approach and transparent communication.</li>
+            <li>Solutions tailored to the local market and user needs.</li>
+            <li>
+              Modern design and smooth user experience, optimized for all
+              devices.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      const images = {
+        project1: [
+          {
+            src: "24.jpg",
+            description: "Header",
+          },
+          {
+            src: "25.jpg",
+            description: "Home page",
+          },
+          {
+            src: "1.jpg",
+            description: "Home page",
+          },
+          {
+            src: "9.jpg",
+            description: "Sign in",
+          },
+          {
+            src: "10.jpg",
+            description: "Sign up",
+          },
+          {
+            src: "3.jpg",
+            description: "Tendance",
+          },
+          {
+            src: "4.jpg",
+            description: "Shop",
+          },
+          {
+            src: "6.jpg",
+            description: "Shop",
+          },
+          {
+            src: "5.jpg",
+            description: "Shop",
+          },
+          {
+            src: "7.jpg",
+            description: "Shop",
+          },
+          {
+            src: "8.jpg",
+            description: "Footer",
+          },
+          {
+            src: "12.jpg",
+            description: "User profile",
+          },
+          {
+            src: "17.jpg",
+            description: "User orders",
+          },
+          {
+            src: "15.jpg",
+            description: "User Favorites",
+          },
+          {
+            src: "13.jpg",
+            description: "Cart",
+          },
+          {
+            src: "14.jpg",
+            description: "Cart",
+          },
+          {
+            src: "18.jpg",
+            description: "Admin Panel",
+          },
+          {
+            src: "19.jpg",
+            description: "Add shoe",
+          },
+          {
+            src: "20.jpg",
+            description: "Orders's list",
+          },
+          {
+            src: "21.jpg",
+            description: "Last products",
+          },
+          {
+            src: "23.jpg",
+            description: "Delete and update products",
+          },
+        ],
+        project2: [
+          {
+            src: "Home.jpg",
+            description: "Home page",
+          },
+          {
+            src: "tendance.jpg",
+            description: "Tendance",
+          },
+          {
+            src: "Top.jpg",
+            description: "Top products",
+          },
+          {
+            src: "signUp.jpg",
+            description: "Sign up",
+          },
+          {
+            src: "SignIn.jpg",
+            description: "Sign in",
+          },
+          {
+            src: "Shop.jpg",
+            description: "Shop",
+          },
+          {
+            src: "filtre.jpg",
+            description: "Product filter",
+          },
+          {
+            src: "ProductDetail.jpg",
+            description: "Top products",
+          },
+          {
+            src: "profile.jpg",
+            description: "User Profile",
+          },
+          {
+            src: "UserFavoris.jpg",
+            description: "User's favorites",
+          },
+          {
+            src: "UserOrders.jpg",
+            description: "User's orders",
+          },
+          {
+            src: "cart.jpg",
+            description: "User's cart",
+          },
+          {
+            src: "dashboard2.jpg",
+            description: "Dashboard-Home 1",
+          },
+          {
+            src: "dashboard1.jpg",
+            description: "Dashboard-Home 2",
+          },
+          {
+            src: "Dashboard.jpg",
+            description: "Dashboard-Home 3",
+          },
+          {
+            src: "Orders.jpg",
+            description: "Orders list",
+          },
+          {
+            src: "orderDetail1.jpg",
+            description: "Orders details 1",
+          },
+          {
+            src: "ordersDetails2.jpg",
+            description: "Orders details 2",
+          },
+          {
+            src: "sideBar.jpg",
+            description: "Dashboard Side bar",
+          },
+        ],
+      };
+
+      let currentProject = "";
+      let currentImageIndex = 0;
+
+      function openModal(project) {
+        currentProject = project;
+        currentImageIndex = 0;
+        updateModalImage();
+        document.getElementById("modal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.add("hidden");
+      }
+
+      function updateModalImage() {
+        const modalImage = document.getElementById("modal-image");
+        const modalDescription = document.getElementById("modal-description");
+
+        modalImage.src = `img/${images[currentProject][currentImageIndex].src}`;
+        modalDescription.textContent =
+          images[currentProject][currentImageIndex].description;
+      }
+
+      function nextImage() {
+        currentImageIndex =
+          (currentImageIndex + 1) % images[currentProject].length;
+        updateModalImage();
+      }
+
+      function prevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + images[currentProject].length) %
+          images[currentProject].length;
+        updateModalImage();
+      }
+    </script>
+    <footer
+      class="py-8 px-4 md:px-16 flex flex-col items-center md:justify-between"
+    >
+      <!-- Top Section with Logo and Contact Info -->
+      <div
+        class="flex flex-col md:flex-row justify-between w-full pt-2 border-t-2 border-t-white items-center md:items-start"
+      >
+        <!-- Logo and Contact Info -->
+        <div class="pb-4 text-center md:text-left">
+          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="flex items-center gap-2">
+              <img class="w-8 h-8 rounded-full" src="img/logo.png" alt="logo" />
+              <p class="font-bold">Webcrafters</p>
+            </div>
+            <p>webcraftersw@gmail.com</p>
+          </div>
+          <p class="mt-2">Web developing and designing agency</p>
+        </div>
+
+        <!-- Media Section -->
+        <div
+          class="mt-4 md:mt-0 text-center md:text-left flex flex-col items-center gap-4"
+        >
+          <h3 class="font-bold mb-2">Media</h3>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61567138180292"><i class="fab fa-facebook text-2xl"></i></a>
+            <a href="https://www.instagram.com/webcraftersw/"><i class="fab fa-instagram text-2xl"></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+            <a href="#"><i class="fab fa-figma text-2xl"></i></a>
+            <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="#"><i class="fab fa-github text-2xl"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="mt-4">
+        <p class="text-center">© Copyright 2024. Made by Webcrafters</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

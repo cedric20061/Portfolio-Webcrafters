@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#102661",
+              start: "#391d9d",
+              middle: "#741cb6",
+              end: "#391888",
+              bodyStart: "#0d0b35",
+              bodyEnd: "#102661",
+            },
+          },
+        },
+      };
+    </script>
+    <title>WebCrafters</title>
+  </head>
+  <body class="bg-gradient-to-br from-bodyStart to-bodyEnd text-white">
+    <header class="px-2 py-2 md:py-8 md:px-16">
+      <div
+        class="flex justify-between items-center border-b-2 border-b-white pb-2"
+      >
+        <!-- Logo et nom du site -->
+        <div class="flex items-center gap-2">
+          <img class="w-16 h-16 rounded-full" src="img/logo.png" alt="logo" />
+          <p class="text-lg font-semibold">Webcrafters</p>
+        </div>
+
+        <!-- Bouton hamburger -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            class="focus:outline-none text-white hover:text-yellow-500"
+          >
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation et sélecteur de langue -->
+        <div class="hidden md:flex items-center gap-8">
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="about.html"
+                  >About-us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="contact.html"
+                  >Contact-us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Menu de navigation caché pour petit écran -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-white p-4 mt-2 rounded-lg"
+      >
+        <nav>
+          <ul class="flex flex-col gap-4">
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="about.html"
+                >About-us</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="contact.html"
+                >Contact-us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="py-16 px-8 md:px-16">
+      <!-- Contact Header -->
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl font-bold text-yellow-500 mb-4">Contact Us</h1>
+        <p class="text-lg max-w-2xl mx-auto">
+          Have a project in mind or need assistance with web development? We'd
+          love to help! Reach out to us using the form below or through any of
+          our contact methods.
+        </p>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Contact Details -->
+        <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">Get in Touch</h2>
+          <p class="text-lg mb-4">Feel free to reach out to us directly:</p>
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5h18M9 3v18M5 21h4a2 2 0 002-2V3a2 2 0 00-2-2H5a2 2 0 00-2 2v16a2 2 0 002 2zm14-2v-2a2 2 0 00-2-2H5m12 6V5m0 10h2a2 2 0 012 2v2a2 2 0 01-2 2h-2m2-10h2m0-4h-2M7 9h.01M7 12h.01M7 15h.01"
+                />
+              </svg>
+              <p>webcraftersw@gmail.com</p>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 10V3.34A2 2 0 0019 2h-4a2 2 0 00-2 2v6l1.39.69c1.34.67 1.61 2.26 1.05 3.52l-3 6a2 2 0 01-2.6 1.08L7 19.22 3.42 17.5A1 1 0 003 18v3a2 2 0 002 2h14a2 2 0 002-2v-3a1 1 0 00-.42-.5L15 15.24l.7-.35L19 14a2 2 0 002-2v-2a2 2 0 00-2-2z"
+                />
+              </svg>
+              <p>+(229) 567-890</p>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 008 0M7 16a4 4 0 01-8 0M7 16v-5a4 4 0 014-4h0a4 4 0 014 4v5m-8-6a4 4 0 008 0"
+                />
+              </svg>
+              <p>Benin</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-bold text-yellow-500 mb-4">
+            Online Availability
+          </h2>
+          <p class="text-lg mb-4">
+            We are available to assist you online at the following times:
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7h4m0 0V3m0 4v14m0 0H4m0 0h16"
+                />
+              </svg>
+              <p>Monday - Friday: 9 AM - 6 PM</p>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m-3-7l3-3m-6 8v4l3 3M6 8l-3 3M9 4a1 1 0 011 1v10a1 1 0 01-1 1h-2a1 1 0 01-1-1V5a1 1 0 011-1h2z"
+                />
+              </svg>
+              <p>Saturday: 10 AM - 4 PM</p>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-6 h-6 text-yellow-500 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 11.29V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-6"
+                />
+              </svg>
+              <p>Sunday: Closed</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div
+        class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-3xl mx-auto"
+      >
+        <h2 class="text-2xl font-bold text-yellow-500 mb-4 text-center">
+          Send Us a Message
+        </h2>
+        <form id="contact-form" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="mt-1 block w-full p-3 bg-white bg-opacity-5 rounded-lg border border-gray-300"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="mt-1 block w-full p-3 bg-white bg-opacity-5 rounded-lg border border-gray-300"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              class="mt-1 block w-full p-3 bg-white bg-opacity-5 rounded-lg border border-gray-300"
+              placeholder="Write your message"
+              required
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-yellow-500 text-white py-3 px-8 rounded-full font-bold hover:bg-yellow-600 transition"
+            >
+              Send Message
+            </button>
+          </div>
+          <!-- Success and error messages -->
+          <p
+            id="success-message"
+            class="hidden text-green-500 mt-4 text-center"
+          >
+            Message sent successfully!
+          </p>
+          <p id="error-message" class="hidden text-red-500 mt-4 text-center">
+            There was an error sending your message. Please try again.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="py-8 px-4 md:px-16 flex flex-col items-center md:justify-between"
+    >
+      <!-- Top Section with Logo and Contact Info -->
+      <div
+        class="flex flex-col md:flex-row justify-between w-full pt-2 border-t-2 border-t-white items-center md:items-start"
+      >
+        <!-- Logo and Contact Info -->
+        <div class="pb-4 text-center md:text-left">
+          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="flex items-center gap-2">
+              <img class="w-8 h-8 rounded-full" src="img/logo.png" alt="logo" />
+              <p class="font-bold">Webcrafters</p>
+            </div>
+            <p>webcraftersw@gmail.com</p>
+          </div>
+          <p class="mt-2">Web developing and designing agency</p>
+        </div>
+
+        <!-- Media Section -->
+        <div
+          class="mt-4 md:mt-0 text-center md:text-left flex flex-col items-center gap-4"
+        >
+          <h3 class="font-bold mb-2">Media</h3>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61567138180292"><i class="fab fa-facebook text-2xl"></i></a>
+            <a href="https://www.instagram.com/webcraftersw/"><i class="fab fa-instagram text-2xl"></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+            <a href="#"><i class="fab fa-figma text-2xl"></i></a>
+            <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="#"><i class="fab fa-github text-2xl"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="mt-4">
+        <p class="text-center">© Copyright 2024. Made by Webcrafters</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("P8kTfKE0giW57C2Yz");
+      })();
+    </script>
+    <script type="text/javascript">
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const serviceID = "service_3rlj7vo";
+          const templateID = "template_qdhwm5o";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            function () {
+              document
+                .getElementById("success-message")
+                .classList.remove("hidden");
+              document.getElementById("error-message").classList.add("hidden");
+            },
+            function (error) {
+              // Affiche un message d'erreur
+              document
+                .getElementById("success-message")
+                .classList.add("hidden");
+              document
+                .getElementById("error-message")
+                .classList.remove("hidden");
+            }
+          );
+
+          // Réinitialise le formulaire après soumission
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

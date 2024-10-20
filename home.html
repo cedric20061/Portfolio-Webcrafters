@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#102661",
+              start: "#391d9d",
+              middle: "#741cb6",
+              end: "#391888",
+              bodyStart: "#0d0b35",
+              bodyEnd: "#102661",
+            },
+          },
+        },
+      };
+    </script>
+    <title>WebCrafters</title>
+  </head>
+  <body class="bg-gradient-to-br from-bodyStart to-bodyEnd text-white">
+    <header class="px-2 py-2 md:py-8 md:px-16">
+      <div
+        class="flex justify-between items-center border-b-2 border-b-white pb-2"
+      >
+        <!-- Logo et nom du site -->
+        <div class="flex items-center gap-2">
+          <img class="w-16 h-16 rounded-full" src="img/logo.png" alt="logo" />
+          <p class="text-lg font-semibold">Webcrafters</p>
+        </div>
+
+        <!-- Bouton hamburger -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            class="focus:outline-none text-white hover:text-yellow-500"
+          >
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation et sélecteur de langue -->
+        <div class="hidden md:flex items-center gap-8">
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="about.html"
+                  >About-us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="cursor-pointer hover:text-yellow-500"
+                  href="contact.html"
+                  >Contact-us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Menu de navigation caché pour petit écran -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-white p-4 mt-2 rounded-lg"
+      >
+        <nav>
+          <ul class="flex flex-col gap-4">
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="projects.html"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="cursor-pointer hover:text-yellow-500" href="about.html"
+                >About-us</a
+              >
+            </li>
+            <li>
+              <a
+                class="cursor-pointer hover:text-yellow-500"
+                href="contact.html"
+                >Contact-us</a
+              >
+            </li>
+          </ul>
+      </div>
+    </header>
+    <div
+      class="flex flex-col md:flex-row justify-around items-center py-8 px-4 md:px-16"
+    >
+      <!-- Section texte -->
+      <div class="text-center md:text-left md:w-1/2">
+        <div class="py-4">
+          <h1 class="text-3xl font-bold">
+            We are <span class="text-yellow-500">Webcrafters</span>
+          </h1>
+          <h2 class="text-2xl">
+            Your
+            <span class="text-yellow-500">Full Stack Web Development</span> and
+            <span class="text-yellow-500">Design</span> Experts
+          </h2>
+        </div>
+        <p class="pb-4 text-lg">
+          Crafting digital solutions that not only work but look stunning. Let’s
+          bring your ideas to life!
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a
+            href="projects.html"
+            class="bg-yellow-300 text-clifford font-semibold rounded-lg py-2 px-4 hover:bg-yellow-400 transition"
+          >
+            Discover Our Projects
+          </a>
+          <a
+            href="contact.html"
+            class="rounded-lg border-2 border-yellow-500 text-yellow-500 font-semibold py-2 px-4 hover:bg-yellow-500 hover:text-white transition"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Section image -->
+      <div class="flex flex-col items-center mt-8 md:mt-0">
+        <img
+          src="img/logoWithoutBg.png"
+          alt="logo"
+          class="w-64 md:w-80 h-auto"
+        />
+        <p class="mt-4 text-center text-lg font-semibold">
+          <span class="bg-yellow-500 text-white px-4 py-2 rounded-full">
+            Let's build your vision together!
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <section
+      class="bg-gradient-to-br from-start via-middle to-end py-8 px-4 md:px-16 mb-8"
+    >
+      <!-- Titre et lien 'view more' -->
+      <div class="flex flex-col md:flex-row justify-between items-center pb-8">
+        <div class="flex gap-4">
+          <h1 class="text-3xl text-yellow-500 font-bold">#Projects</h1>
+        </div>
+        <p class="mt-4 md:mt-0">
+          <a
+            href="projects.html"
+            class="hover:text-yellow-500 text-black transition"
+          >
+            View more
+          </a>
+        </p>
+      </div>
+
+      <!-- Section des projets -->
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Carte de projet 1 -->
+        <div
+          class="border-2 border-gray-200 rounded-lg w-full md:w-64 hover:shadow-lg transition"
+        >
+          <img
+            class="rounded-t-lg h-64 w-full object-cover"
+            src="img/logoOriolShoes.jpg"
+            alt="Oriol's Shoes"
+          />
+          <p class="text-sm border-b-2 border-gray-200 px-2 py-1">
+            HTML, CSS, JS, Node.js (Express.js), MySQL
+          </p>
+          <div class="p-4">
+            <h2 class="text-lg font-bold">Oriol's Shoes</h2>
+            <p class="text-sm py-2 text-black">Shoe e-store</p>
+            <a href="projects.html"
+              class="border-2 border-yellow-500 rounded-lg py-1 px-4 text-yellow-500 hover:bg-yellow-500 hover:text-white transition"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte de projet 2 -->
+        <div
+          class="border-2 border-gray-200 rounded-lg w-full md:w-64 hover:shadow-lg transition"
+        >
+          <img
+            class="rounded-t-lg h-64 w-full object-cover"
+            src="img/logoAnisShop.jpg"
+            alt="Anis Shop"
+          />
+          <p class="text-sm border-b-2 border-gray-200 px-2 py-1">
+            React.js, TypeScript, Node.js (Express.js), MySQL
+          </p>
+          <div class="p-4">
+            <h2 class="text-lg font-bold">Anis Shop</h2>
+            <p class="text-sm py-2 text-black">E-store</p>
+            <a href="projects.html"
+              class="border-2 border-yellow-500 rounded-lg py-1 px-4 text-yellow-500 hover:bg-yellow-500 hover:text-white transition"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 px-4 md:px-16 mb-8">
+      <div class="flex justify-between items-center pb-8">
+        <div class="flex gap-4">
+          <h1 class="text-3xl text-yellow-500 font-bold">#Skills</h1>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="w-full md:w-3/5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Languages -->
+            <div
+              class="bg-white bg-opacity-10 p-4 border-2 border-white rounded-lg"
+            >
+              <h3
+                class="font-bold border-b-2 border-b-white flex items-center gap-2"
+              >
+                <i class="fas fa-code text-yellow-500"></i>Languages
+              </h3>
+              <p class="pt-2">JavaScript, TypeScript, Python, Git, UML</p>
+            </div>
+
+            <!-- Databases -->
+            <div
+              class="bg-white bg-opacity-10 p-4 border-2 border-white rounded-lg"
+            >
+              <h3
+                class="font-bold border-b-2 border-b-white flex items-center gap-2"
+              >
+                <i class="fas fa-database text-yellow-500"></i>Databases
+              </h3>
+              <p class="pt-2">MySQL, MongoDB</p>
+            </div>
+
+            <!-- Tools -->
+            <div
+              class="bg-white bg-opacity-10 p-4 border-2 border-white rounded-lg"
+            >
+              <h3
+                class="font-bold border-b-2 border-b-white flex items-center gap-2"
+              >
+                <i class="fas fa-tools text-yellow-500"></i>Tools
+              </h3>
+              <p class="pt-2">
+                VSCode, GitHub, Docker, Figma, Font-Awesome, Postman, Trello, Mongoose, Sequelize, Redux toolkit
+              </p>
+            </div>
+
+            <!-- Frameworks -->
+            <div
+              class="bg-white bg-opacity-10 p-4 border-2 border-white rounded-lg"
+            >
+              <h3
+                class="font-bold border-b-2 border-b-white flex items-center gap-2"
+              >
+                <i class="fas fa-layer-group text-yellow-500"></i>Frameworks
+              </h3>
+              <p class="pt-2">
+                TailwindCSS, Bootstrap, React, ExpressJS, AdonisJS, NextJs
+              </p>
+            </div>
+
+            <!-- Others -->
+            <div
+              class="bg-white bg-opacity-10 p-4 border-2 border-white rounded-lg"
+            >
+              <h3
+                class="font-bold border-b-2 border-b-white flex items-center gap-2"
+              >
+                <i class="fas fa-laptop-code text-yellow-500"></i>Others
+              </h3>
+              <p class="pt-2">HTML, CSS, NodeJS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <img
+          class="rounded-lg w-full md:w-2/5 object-cover"
+          src="img/competences.jpg"
+          alt="skills"
+        />
+      </div>
+    </section>
+
+    <section class="mb-8 relative">
+      <!-- Background Image -->
+      <img
+        src="img/ourTeam.jpg"
+        alt="Team Background"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <!-- Content Over the Image -->
+      <div class="relative z-10 text-white py-20 px-4 md:px-16">
+        <h1 class="text-4xl font-bold mb-8 text-yellow-500 text-center">
+          Meet Our Team
+        </h1>
+
+        <!-- Team Members Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <!-- Senior Full Stack Developer -->
+          <div class="bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
+            <h2
+              class="text-2xl font-bold text-clifford flex items-center gap-2"
+            >
+              <i class="fas fa-code text-yellow-500"></i> Full Stack
+              Developer
+            </h2>
+            <p class="mt-2 text-black">
+              With 10 years of experience, he brings unmatched technical
+              expertise and advanced web design skills to the table.
+            </p>
+          </div>
+
+          <!-- Django Specialist -->
+          <div class="bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
+            <h2
+              class="text-2xl font-bold text-clifford flex items-center gap-2"
+            >
+              <i class="fab fa-python text-yellow-500"></i> Django Specialist
+            </h2>
+            <p class="mt-2 text-black">
+              Passionate about building robust applications, he excels in
+              utilizing Django for backend development.
+            </p>
+          </div>
+
+          <!-- Next.js Enthusiast -->
+          <div class="bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
+            <h2
+              class="text-2xl font-bold text-clifford flex items-center gap-2"
+            >
+              <i class="fab fa-react text-yellow-500"></i> Next.js Enthusiast
+            </h2>
+            <p class="mt-2 text-black">
+              Innovative and dynamic, he focus on creating performant,
+              server-side rendered applications with Next.js.
+            </p>
+          </div>
+
+          <!-- Adonis.js Developer -->
+          <div class="bg-white bg-opacity-70 p-6 rounded-lg shadow-lg">
+            <h2
+              class="text-2xl font-bold text-clifford flex items-center gap-2"
+            >
+              <i class="fas fa-server text-yellow-500"></i> Adonis.js Developer
+            </h2>
+            <p class="mt-2 text-black">
+              Skilled in building scalable applications, he leverage the power
+              of Adonis.js for efficient web solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-8 px-4 md:px-16 mb-8 flex flex-col md:flex-row justify-between items-center gap-8"
+    >
+      <!-- Image -->
+      <img
+        class="w-full md:w-1/2 rounded-lg object-cover"
+        src="img/workflow.jpg"
+        alt="Our Workflow"
+      />
+
+      <!-- Content -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl text-center font-bold text-yellow-500 pb-8">
+          Our Approach
+        </h2>
+
+        <!-- Grid Content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Client-Focused Block -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+              <i class="fas fa-user-tie text-yellow-500"></i> Client-Focused
+            </h3>
+            <p class="text-sm">
+              We prioritize our clients' needs, placing them at the heart of our
+              process.
+            </p>
+          </div>
+
+          <!-- Agile Development Block -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+              <i class="fas fa-cogs text-yellow-500"></i> Agile Development
+            </h3>
+            <p class="text-sm">
+              Our iterative process ensures the delivery of high-quality
+              projects.
+            </p>
+          </div>
+
+          <!-- Transparency Block -->
+          <div
+            class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg col-span-1 sm:col-span-2"
+          >
+            <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+              <i class="fas fa-eye text-yellow-500"></i> Transparency
+            </h3>
+            <p class="text-sm">
+              We maintain open communication throughout the entire project
+              lifecycle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-8 px-4 md:px-16 flex flex-col items-center md:justify-between"
+    >
+      <!-- Top Section with Logo and Contact Info -->
+      <div
+        class="flex flex-col md:flex-row justify-between w-full pt-2 border-t-2 border-t-white items-center md:items-start"
+      >
+        <!-- Logo and Contact Info -->
+        <div class="pb-4 text-center md:text-left">
+          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div class="flex items-center gap-2">
+              <img class="w-8 h-8 rounded-full" src="img/logo.png" alt="logo" />
+              <p class="font-bold">Webcrafters</p>
+            </div>
+            <p>webcraftersw@gmail.com</p>
+          </div>
+          <p class="mt-2">Web developing and designing agency</p>
+        </div>
+
+        <!-- Media Section -->
+        <div
+          class="mt-4 md:mt-0 text-center md:text-left flex flex-col items-center gap-4"
+        >
+          <h3 class="font-bold mb-2">Media</h3>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a href="https://www.facebook.com/profile.php?id=61567138180292"><i class="fab fa-facebook text-2xl"></i></a>
+            <a href="https://www.instagram.com/webcraftersw/"><i class="fab fa-instagram text-2xl"></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+            <a href="#"><i class="fab fa-figma text-2xl"></i></a>
+            <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+            <a href="#"><i class="fab fa-github text-2xl"></i></a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="mt-4">
+        <p class="text-center">© Copyright 2024. Made by Webcrafters</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
